@@ -12,7 +12,7 @@ body {
     margin: 0;
     padding: 0;
     color: white;
-    font-family: 'Skranji', cursive;
+    font-family: 'Croissant One', cursive;
 }
 
 .background-image {
@@ -37,41 +37,30 @@ body {
     z-index: 0;
 }
 .blur-2 {
-    border-radius: 40px;
+    border-radius: 0;
     display: flex;
-    margin: 100px auto;
-    height: calc(100vh - 200px);
-    width: calc(100vw - 400px);
+    margin: auto;
+    height: calc(100vh);
+    width: calc(100vw);
     justify-content: center;
     background-color: var(--background-1);
     backdrop-filter: blur(10px);
 }
 .text-div {
-    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
-.menu-item {
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-.menu-item a {
+.text-div a {
     text-decoration: none;
     color: inherit;
 }
 .first-item {
-    font-size: 6rem;
-}
-.second-item,
-.third-item,
-.fifth-item {
     font-size: 3rem;
-    font-family: 'Croissant One', cursive;
-    transition: font-size 0.3s ease;
+    margin-bottom: 100px;
 }
-.second-item:hover,
-.third-item:hover,
-.fifth-item:hover {
-    font-size: 3.5rem;
+.second-item {
+    font-size: 1rem;
 }
