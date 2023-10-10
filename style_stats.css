@@ -6,12 +6,19 @@
 
 :root {
     --background-1: rgba(255, 255, 255, 0.5);
+    --text-main-font-size: 3rem;
+    --text-secondary-font-size: 2rem;
+    --text-small-font-size: 1rem;
+}
+.flexColumn {
+    display: flex;
+    gap: 50px;
 }
 
 body {
     margin: 0;
     padding: 0;
-    color: white;
+    color: black;
     font-family: 'Croissant One', cursive;
     background-color: black;
 }
@@ -33,7 +40,8 @@ body {
 }
 .blur-1-container {
     display: flex;
-    width: 100%;
+    align-items: flex-start;
+    width: 100vw;
     height: 100%;
     z-index: 0;
 }
@@ -41,27 +49,24 @@ body {
     border-radius: 0;
     display: flex;
     margin: auto;
+    align-items: flex-start;
     height: calc(100vh);
     width: calc(100vw);
-    justify-content: center;
     background-color: var(--background-1);
     backdrop-filter: blur(10px);
 }
-.text-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+.textContainer {
+    margin: 50px;
 }
-.text-div a {
+.mainHeader {
+    font-size: var(--text-main-font-size);
+    margin-bottom: 30px;
+}
+.mainHeader a {
     text-decoration: none;
     color: inherit;
 }
-.first-item {
-    font-size: 3rem;
-    margin-bottom: 100px;
-}
-.second-item {
-    font-size: 1rem;
+.description {
+    margin-left: 40px;
+    font-size: var(--text-small-font-size);
 }
