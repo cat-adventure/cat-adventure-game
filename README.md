@@ -1,3 +1,3 @@
 # cat-adventure-game
-Text-based RPG hra
+Branch jen JS
 ## https://cat-adventure.github.io/cat-adventure-game/
