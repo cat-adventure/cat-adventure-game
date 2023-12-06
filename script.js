@@ -1,32 +1,45 @@
-console.log('Funguje');
-const MINIMUM = 100;
-const PRIBEH = 1;
-const jmenoUzivatele = window.prompt('Jak chceš, abychom ti říkali?' , 'Jméno tvého nicku');
-window.alert(`Vítej v naší hře, ${jmenoUzivatele}!`);
-
-let storyNumber = window.prompt('Jaký storyline by jsi si chtěl zahrát? (Momentálně můžeš vybrat jen 1)', 1);
-//window.confirm('Je ti opravdu ' + Number(vekUzivatele) + 'let?');
-
-if (storyNumber === PRIBEH) {
-    window.alert(`Zvolil jsi příběh číslo ${storyNumber}!`);
+alert("Ahoj, vítejte na našem webu!");
+let name = prompt("Jak se jmenujete?");
+alert("Ahoj " + name + "!");
+let story = prompt("Který příběh si přejete vybrat? (1, 2 nebo 3)");
+while (story != "1" && story != "2" && story != "3") {
+  alert("Můžete napsat pouze 1, 2 nebo 3.");
+  story = prompt("Který příběh si přejete vybrat? (1, 2 nebo 3)");
 }
-
-else if (storyNumber > PRIBEH) {
-    window.alert("Prosím vyber číslo příběhu (možné odpovědi: 1)");
-    let storyNumber = window.prompt('Jaký storyline by jsi si chtěl zahrát? (Momentálně můžeš vybrat jen 1)', 1);
-}
-
-else if (storyNumber < PRIBEH) {
-    window.alert("Prosím vyber číslo od jedné do tří!")
-    let storyNumber = window.prompt('Jaký storyline by jsi si chtěl zahrát? (Momentálně můžeš vybrat jen 1)', 1);
-}
-
-else {
-    if (!isNaN(storyNumber)) {
-        console.alert(`Zvolil jsi příběh číslo ${storyNumber}!`);
+let isRight;
+if (story == "1") {
+  isRight = confirm("Vybrali jste si příběh číslo 1, je to správně?");
+  if (!isRight) {
+    story = prompt("Který příběh si přejete vybrat? (1, 2 nebo 3)");
+    while (story != "1" && story != "2" && story != "3") {
+      alert("Můžete napsat pouze 1, 2 nebo 3.");
+      story = prompt("Který příběh si přejete vybrat? (1, 2 nebo 3)");
     }
-    else {
-        console.alert(`To není číslo, prosím zadej číslo příběhu`);
+    isRight = confirm("Vybrali jste si příběh číslo 1, je to správně?");
+  }
+} else if (story == "2") {
+  isRight = confirm("Vybrali jste si příběh číslo 2, je to správně?");
+  if (!isRight) {
+    story = prompt("Který příběh si přejete vybrat? (1, 2 nebo 3)");
+    while (story != "1" && story != "2" && story != "3") {
+      alert("Můžete napsat pouze 1, 2 nebo 3.");
+      story = prompt("Který příběh si přejete vybrat? (1, 2 nebo 3)");
     }
-    vekUzivatele = window.prompt(`Zvolil jsi příběh číslo ${storyNumber}!`, 1);
+    isRight = confirm("Vybrali jste si příběh číslo 2, je to správně?");
+  }
+} else {
+  isRight = confirm("Vybrali jste si příběh číslo 3, je to správně?");
+  if (!isRight) {
+    story = prompt("Který příběh si přejete vybrat? (1, 2 nebo 3)");
+    while (story != "1" && story != "2" && story != "3") {
+      alert("Můžete napsat pouze 1, 2 nebo 3.");
+      story = prompt("Který příběh si přejete vybrat? (1, 2 nebo 3)");
+    }
+    isRight = confirm("Vybrali jste si příběh číslo 3, je to správně?");
+  }
 }
+let catNames = ["Mourek", "Micka", "Mourek", "Micka", "Tiger", "Simba", "Luna", "Oreo", "Shadow", "Charlie", "Batman", "Kočkoholka"];
+let catName = catNames[Math.floor(Math.random() * catNames.length)];
+alert("Vaše jméno postavy je " + catName);
+let date = new Date().toLocaleDateString();
+alert("Děkujeme, že jste vyplnili nastavení, je " + date + ", vítejte v naší hře!");
